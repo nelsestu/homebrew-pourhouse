@@ -1,13 +1,13 @@
 cask 'ulbow' do
-  version '1.2,2020.03'
-  sha256 'd6bc27d8772c40319d240bfae38ffce292dd181507579862096cc9a8f12b7c5e'
+  version '1.5.1'
+  sha256 'd283a3cc2dc62bc8a15388cf1a899cbd3892b0c79eecd3428637a2110007a40b'
 
   # eclecticlightdotcom.files.wordpress.com was verified as official when first introduced to the cask
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/ulbow#{version.before_comma.no_dots}.zip"
+  url "https://github.com/tmoreno/open-log-viewer/releases/download/#{version}/open-log-viewer_#{version}/#{version}.dmg"
   name 'ulbow'
-  homepage 'https://eclecticlight.co/consolation-t2m2-and-log-utilities/'
+  homepage 'https://eclecticlight.co/2020/06/30/finding-your-way-around-the-log-using-ulbow/'
 
   depends_on macos: '>= :sierra'
 
-  app "ulbow#{version.before_comma.no_dots}/Ulbow.app"
+  app "ulbow#{version}/Ulbow.app"
 end
