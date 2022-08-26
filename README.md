@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/sticklerm3/homebrew-pourhouse.svg?branch=master)](https://travis-ci.com/sticklerm3/homebrew-pourhouse)
 
-Welcome to my pourhouse! This is my tap for some casks I wanted to automate the installation of. So far, I just have a hand-full completed and they're all from Howard Oakley over at [Eclectic Light Co.][6f8d9867] in the [Downloads][02b6cdf0] section. There is a list below of the currently enabled applications and it’s corresponding `token`.
+Welcome to this pourhouse! I started this tap as a fork of a repo that contained some casks I wanted but had fallen too far out of date to work. So far, I just have a hand-full completed and they're all from Howard Oakley over at [Eclectic Light Co.][6f8d9867] in the [Downloads][02b6cdf0] section. There is a list below of the currently enabled applications and it’s corresponding `token`.
 
 ## Getting Started
 
@@ -12,20 +12,20 @@ First you need Homebrew installed if you don’t already. To install open Termin
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Verify everything installed correctly by running `brew doctor` then you can add my tap by running:
+Verify everything installed correctly by running `brew doctor` then you can add this tap by running:
 
 ```bash
-brew tap sticklerm3/pourhouse
+brew tap nelsestu/pourhouse
 ```
 
-This creates a shallow clone of `sticklerm3/pourhouse` to `$(brew --repo)/Library/Taps/sticklerm3/pourhouse`.
+This creates a shallow clone of `nelsestu/pourhouse` to `$(brew --repo)/Library/Taps/nelsestu/pourhouse`.
 
-Then, you can continue to use `brew cask install <formula>` for anything unless for some reason theres another cask with the same name, simply identify the tap before the formula: `brew cask install sticklerm3/pourhouse/<formula>`
+Then, you can continue to use `brew install <formula>` for anything unless for some reason theres another cask with the same name, simply identify the tap before the formula: `brew install nelsestu/pourhouse/<formula>`
 
 Or install via URL (which will not receive updates):
 
 ```bash
-brew cask install https://raw.githubusercontent.com/Sticklerm3/homebrew-pourhouse/master/Casks/<formula>.rb
+brew cask install https://raw.githubusercontent.com/nelsestu/homebrew-pourhouse/master/Casks/<formula>.rb
 ```
 
 ## List of Casks
@@ -71,7 +71,7 @@ brew cask install https://raw.githubusercontent.com/Sticklerm3/homebrew-pourhous
 |       Sandstrip       |  1.1   | Sierra  | `sandstrip`             |
 |         Taccy         |  1.8   | Sierra  | `taccy`                 |
 |         T2M2          |  1.14  | Sierra  | `t2m2`                  |
-|         Ulbow         |  1.2   | Sierra  | `ulbow`                 |
+|         Ulbow         |  1.7   | Sierra  | `ulbow`                 |
 |        Whither        |  1.0   | Sierra  | `whither`               |
 
 ### El Capitan and newer
@@ -98,7 +98,7 @@ brew cask install https://raw.githubusercontent.com/Sticklerm3/homebrew-pourhous
 
 ### CLI Tools
 
-I’m still newer at writing formula/Ruby so bear with me here. The following are CLI utilities that are installed using `brew cask` as their binaries are already compiled. Use the same syntax to install as above (`brew cask install alisma`)
+I’m still newer at writing formula/Ruby so bear with me here. Since homebrew no longer requires the use of `brew cask` and since it is smart enough to find things in your third party taps, you just use the same syntax to install as above (`brew install alisma`)
 
 |    App   | Vers. |   Min. OS  | Formula Name |
 | :------: | :---: | :--------: | :----------- |
@@ -142,4 +142,3 @@ If you notice an error, have a contribution or an update, feel free to fork the 
 
 [9d01861c]: https://brew.sh "Homebrew"
 
-[80447341]: https://github.com/sticklerm3/alehouse "Alehouse"
